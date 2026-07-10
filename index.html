@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TT랭킹 — 탁구 동호회를 위한 기록 앱</title>
+<meta name="description" content="탁구 동호회의 모임, 대진표, 경기 기록, 랭킹을 한 곳에서. TT랭킹.">
+<style>
+  :root{
+    --table:#12556b;        /* 탁구대 */
+    --table-dark:#0b3a49;
+    --ball:#f26b21;         /* 공 */
+    --floor:#efe7da;        /* 체육관 바닥 */
+    --ink:#12212b;
+    --muted:#5d6b73;
+    --line:#d9d0c1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+    color:var(--ink);background:var(--floor);
+    font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+  .net{height:10px;background:var(--table);position:relative}
+  .net::after{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(90deg,transparent 0 7px,rgba(255,255,255,.35) 7px 8px)}
+
+  header{background:var(--table);color:#fff;padding:clamp(56px,12vw,110px) 24px clamp(48px,10vw,90px)}
+  .wrap{max-width:720px;margin:0 auto}
+  .mark{display:flex;align-items:center;gap:10px;margin-bottom:36px}
+  .ball{width:13px;height:13px;border-radius:50%;background:var(--ball);
+    box-shadow:0 0 0 3px rgba(242,107,33,.22)}
+  .mark span{font-weight:700;letter-spacing:.14em;font-size:13px;opacity:.85}
+
+  h1{font-size:clamp(34px,7.5vw,54px);line-height:1.22;font-weight:800;letter-spacing:-.02em}
+  h1 em{font-style:normal;color:var(--ball)}
+  header p{margin-top:22px;font-size:clamp(17px,2.4vw,19px);opacity:.86;max-width:30em}
+
+  .badge{display:inline-block;margin-top:36px;padding:9px 16px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.32);font-size:14px;letter-spacing:.02em}
+
+  main{padding:clamp(48px,9vw,84px) 24px}
+  h2{font-size:13px;letter-spacing:.16em;color:var(--muted);font-weight:700;margin-bottom:28px}
+
+  .rows{border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:1.6em 1fr;gap:16px;
+    padding:20px 0;border-bottom:1px solid var(--line)}
+  .row b{color:var(--table);font-weight:800;font-variant-numeric:tabular-nums}
+  .row div strong{display:block;font-weight:700;margin-bottom:2px}
+  .row div span{color:var(--muted);font-size:15.5px}
+
+  footer{background:var(--table-dark);color:#fff;padding:44px 24px 52px}
+  footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:1px}
+  footer a:hover,footer a:focus-visible{color:var(--ball);border-color:var(--ball)}
+  footer nav{display:flex;flex-wrap:wrap;gap:22px;font-size:15.5px}
+  footer small{display:block;margin-top:28px;opacity:.6;font-size:13.5px;line-height:1.85}
+  a:focus-visible{outline:2px solid var(--ball);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="mark"><i class="ball"></i><span>TT RANKING</span></div>
+    <h1>탁구는 이미 쳤다.<br><em>기록만 남으면 된다.</em></h1>
+    <p>모임 공지부터 대진표, 점수 입력, 랭킹까지. 동호회 운영에 필요한 것만 담았습니다.</p>
+    <span class="badge">2026년 출시 준비 중</span>
+  </div>
+</header>
+
+<div class="net"></div>
+
+<main>
+  <div class="wrap">
+    <h2>하는 일</h2>
+    <div class="rows">
+      <div class="row"><b>01</b><div><strong>모임을 연다</strong>
+        <span>일시, 장소, 일비를 적어 올리면 회원이 참석 버튼을 누릅니다.</span></div></div>
+      <div class="row"><b>02</b><div><strong>대진표를 짠다</strong>
+        <span>단식·복식·단체전. 풀리그, 토너먼트, 조별예선. 부수를 반영해 자동으로 짭니다.</span></div></div>
+      <div class="row"><b>03</b><div><strong>점수를 넣는다</strong>
+        <span>크로스표를 눌러도 되고, 선수를 골라 넣어도 됩니다. 코트 옆에서 몇 초면 끝납니다.</span></div></div>
+      <div class="row"><b>04</b><div><strong>랭킹이 남는다</strong>
+        <span>승점과 레이팅이 모임마다 쌓입니다. 회원 이름을 누르면 전적이 나옵니다.</span></div></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="terms.html">이용약관</a>
+      <a href="mailto:ttranking@gmail.com">문의하기</a>
+    </nav>
+    <small>
+      TT랭킹 &middot; 운영자 방문선 &middot; ttranking@gmail.com<br>
+      &copy; 2026 TT랭킹. All rights reserved.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
